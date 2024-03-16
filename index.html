@@ -15,30 +15,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- mtu mwingine atafute logo aweke apa.muanze kuunda hii kitu tulichagua color green na black ama sasa tutumie hizo -->
 	<link rel="icon" href="">
 	<link rel="stylesheet" href="./css/index.css">
 	<title>TOP PROGRAMMERS</title>
 </head>
 <body>
-	<!--hii ni example mnaeza endelea kutoka hapa kila mtu achangie.-->
-	<!--<div class="container">
-		<div class="navigation">
-				<h3>MSU MACPROGRAMMERS</h3>
-			<div id="links">
-				<a href="members.html">Members</a>
-				<a href="contact.html">Contact</a>
-				<a href="about.html">About</a>
-			</div>
-		</div>-->
-		<!--mm ka Geo nilianza hapa -->
 		<section>
 			<nav>
-				<a href="index.html"><img src="images/logo2.png"></a>
+				<a href="index.html"><img  src="images/logo.png"></a>
                 <div class="nav-links">
 					<ul>
-						<li><a href="">MEMBERS</a></li>
+						<li><a href="#members">MEMBERS</a></li>
 						<li><a href="">CONTACTS</a></li>
 						<li><a href="">ABOUT</a></li>
 						<li><a href="">HELP</a></li>
@@ -51,20 +40,39 @@
 		</section>
 		
 		
-		
-		<!-- ukiunda make sure umedesign kitu appealling bana usimix colors kama mwendawazimu😂 -->
-		<div class="body">
-			
-		</div>
+		<!-- introduction -->
 		<div class="text-box">
 			<h1>TOP PROGRAMMERS GROUP</h1>
-			<p>This is a group of programmers determined to do wonders through programming.You can't bear to see what we will achieve.</p>
-			<a href="index.html"class="geo">Visit Us To Know More</a>
-
-
+			<p>top programmers  is a group of programmers from Maseno University.We are enthusiastic about the future of technology, driven by passion to explore new frontiers, pioneer groundbreaking solutions, and shape the digital landscape of tomorrow.</p>
 		</div>
 		
 		
+		<!-- members photo -->
+		<div id="members">
+			<h1>members</h1>
+			<div class="members_list">
+				<!-- johnson -->
+				<div data-aos="flip-right">
+					<img src="./images/johnson.jpg" alt="johnson">
+					<h3>Ronjohnson Owuor</h3>
+					<span>Computer science</span>
+					<a href="https://ronjohnson-owuor.github.io">view portfolio</a>
+				</div>
+
+			<!-- copy hii div mzima na ujiweke hapo hivyo hivyo kwa kila mtu-->
+			<div data-aos="flip-right">
+				<img src="https://cdn.pixabay.com/photo/2018/04/27/03/50/portrait-3353699_640.jpg" alt="replace na picha yako">
+				<h3>Your name</h3>
+				<span>Your course</span>
+				<!-- your portfolio kama uko nayo -->
+				<a href="#">view portfolio</a>
+			</div>
+			</div>
+		</div>
 	</div>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
 </body>
 </html>

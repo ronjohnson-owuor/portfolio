@@ -2,17 +2,21 @@
 /* usiandike color yoyote hivi => color:red; tumia hizi color nimeweka na ukitaka kuchange unachange kwa root
 then ukitaka kuweka color unafanya color:var(--background); hivo👈 ndio tukae uniform */
 :root{
-	--background:#1C1427;
+	--background:#040207;
 	--background2:#40394A;
 	--primary:#16FF00;
-	--font:verdana;
+	--font:Verdana;
 	--white:#FFF;
+	--shadow:-7px 15px 75px -6px var(--background2);
 }
 
 *{
 	padding: 0px;
 	margin: 0px;
-	background: var(--background); /*hivi ndio nilikuwa nasema*/
+	background: var(--background);
+	font-family: var(--font);
+	color: var(--white);
+	scroll-behavior: smooth;
 }
 
 .container{
@@ -66,10 +70,10 @@ nav img{
 	position:relative;
 }
 .nav-links ul li a{
-       color:#16FF00;
+       color:var(--primary);
 	   text-decoration: none;
 	   font-size: 13px;
-	   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	   font-family:var(--font);
 }
 .nav-links ul li::after{
 	content:'';
@@ -85,26 +89,24 @@ nav img{
 }
 .text-box{
 	width:90%;
-	color:#FFF;
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%,-50%);
+	margin:3rem 0rem 3rem 3rem;
+	color:var(--white);
 	text-align: center;
 }
 .text-box h1{
 	font-size: 62px;
 }
 .text-box p{
-	margin: 10px 0 40px;
+	width: 70%;
+	margin:2rem 15% 2rem 15%;
 	font-size: 14px;
-	color:#FFF;
+	color:var(--white);
 }
 .geo{
 	display: inline-block;
 	text-decoration: none;
-	color:#FFF;
-	border:1px solid #FFF;
+	color:var(--white);
+	border:1px solid var(--white);
 	padding:12px 34px;
 	font-size: 13px;
 	background: transparent;
@@ -114,12 +116,83 @@ nav img{
 
 }
 .geo:hover{
-	border:1px solid #16FF00 ;
-	background:#16FF00;
+	border:1px solid var(--primary);
+	background:var(--primary);
 	transition: 1s;
 }
 @media(max-width:700px){
 	.text-box h1{
 		font-size: 20px;
 	}
+}
+
+.members_list{
+	display: flex;
+}
+
+#members{
+	width: 90%;
+	margin: 10rem 0rem 2rem 3rem;
+}
+
+#members h1{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.members_list{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content:center;
+	gap: 2rem;
+	align-items: center;
+}
+
+.members_list div{
+	width: 200px;
+	border-radius: 20px;
+	padding: 1rem;
+	display: flex;
+	box-shadow: var(--shadow);
+	flex-direction: column;
+}
+
+.members_list div img{
+	width:150px;
+	height: 150px;
+	margin: 0% 5% 1rem 5%;
+	object-fit: cover;
+	border-radius: 100vh;
+	border: 4px solid var(--primary);
+}
+
+.members_list div h3{
+	width: 90%;
+	font-size: 16px;
+	margin: 0px 0px 4px 0px;
+}
+
+.members_list div span{
+	color: var(--background2);
+}
+
+.members_list div a{
+	text-decoration: none;
+	margin-top: 1rem;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: 40px;
+	background: var(--primary);
+	font-size: 14px;
+	transition: 1s ease-in-out;
+}
+
+.members_list div a:hover{
+	background: transparent;
+	color: var(--white);
+	border: 1px solid var(--background2);
 }
