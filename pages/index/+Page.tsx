@@ -1,84 +1,112 @@
-import { Cog, Mail, Newspaper, User } from 'lucide-react';
+import { BriefcaseBusiness, Cog, Rss } from 'lucide-react';
+import './index.css';
 import flowers_sit from '../../assets/flowers_sit.png';
-export default function Page() {
-	return (
-		<div className='bg-darkBg w-full min-h-screen mb-0'>
-			<div className='bg-darkOverlay w-full min-h-[400px] grid gap-4 grid-cols-3 grid-col  p-4'>
-				<div className='p-2 w-full min-h-[400px] flex flex-col items-center justify-center'>
-					<h1 className='text-[40px] text-center text-darkText font-sans font-bold'>
-						<i>Hi, I am</i> <br />{' '}
-						<b className='text-primary text-[50px]'>RON JOHNSON</b>
-					</h1>
-					<p className='font-sans italic text-sm w-[80%] my-2 text-darkTextMuted'>
-						<i className='text-secondary italic'>Software Engineer</i> and
-						<i className='text-secondary italic'> computer scientist</i> 🫡
-						living in Kisumu,Kenya.I build tools/projects that help make life
-						easy and provide value.
-					</p>
-				</div>
 
-				<img
-					src={flowers_sit}
-					className='w-[400px] h-[400] filter brightness-80 grayscale -contrast-100 hover:grayscale-10 transition-linear duration-500 object-fit'
-				/>
-				<div className='w-full min-h-[400px] flex items-start justify-center flex-col gap-4'>
-					<ul className='text-darkTextMuted flex flex-col gap-4'>
-						<li>
-							<a
-								href='/blog'
-								className='flex items-center gap-2 text-md transition-linear duration-500  p-2 hover:text-2xl hover:text-primary hover:underline'
-							>
-								<Newspaper size={20} />
-								my blog
-							</a>
-						</li>
-						<li>
-							<a
-								href='/tools'
-								className='flex items-center gap-2 text-md transition-linear duration-500  p-2 hover:text-2xl hover:text-primary hover:underline'
-							>
-								<Cog size={20} />
-								tools
-							</a>
-						</li>
-						<li>
-							<a
-								href='/contact'
-								className='flex items-center gap-2 text-md transition-linear duration-500  p-2 hover:text-2xl hover:text-primary hover:underline'
-							>
-								<Mail size={20} />
-								contact me
-							</a>
-						</li>
-						<li>
-							<a
-								href='/about'
-								className='flex items-center gap-2 text-md transition-linear duration-500  p-2 hover:text-2xl hover:text-primary hover:underline'
-							>
-								<User size={20} />
-								about me
-							</a>
-						</li>
-					</ul>
+function Page() {
+	return (
+		<div className='w-full min-h-screen overflow-y-scroll bg-darkBg'>
+			<div id='header' className='w-full h-screen grid grid-cols-2 gap-4'>
+				<div className='flex justify-center flex-col items-center text-center gap-10'>
+					<h2 className='text-[40px] text-darkText font-bold'>
+						Hi, there am
+						<b className='text-primary text-[60px]'>Ronjohnson</b>
+					</h2>
+					<p className='w-[80%] text-darkTextMuted font-bold'>
+						I am a <i className='text-secondary'>software engineer</i> .I
+						majorly work on building website and Applications.I like building
+						tools and using my tech skills to make life easier for others.
+					</p>
+
+					<div className='flex gap-4 text-darkText my-10'>
+						<button className='flex gap-2 bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'>
+							<Rss />
+							<p>blog</p>
+						</button>
+						<button className='flex  bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'>
+							<Cog />
+							<p>tools</p>
+						</button>
+						<button className='flex bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'>
+							<BriefcaseBusiness />
+							<p>work with me</p>
+						</button>
+					</div>
+				</div>
+				<div className='w-full h-full  grid place-content-center relative'>
+					{/* image box */}
+					<div>
+						<img
+							loading='lazy'
+							className='filter grayscale-10 sepia-80 brightness-100 w-[300px] h-[450px] object-fit  absolute translate-y-20 z-10 scale-[1.9] transition duration-500'
+							src={flowers_sit}
+							alt=''
+						/>
+						<div className='w-[300px] h-[300px] rounded-[100vh] bg-primary shadow-2xl shadow-secondary filter blur contrast-120'></div>
+					</div>
 				</div>
 			</div>
-			{/* footer */}
-			<div className='w-full h-[40px] bg-primary flex items-center justify-around'>
-				<p>&copy;2026,dalarX infini</p>
-				<div>
-					<ul className='flex flex-row items-center gap-2'>
-						<li className='underline text-darkText hover:text-black'>
-							<a href='https://tiktok.com/@surv3illant'>tiktok</a>
-						</li>
-						<li className='underline text-darkText hover:text-black'>
-							<a href='https://instagram.com/surv3illant_'>instagram</a>
-						</li>
-						<li className='underline text-darkText hover:text-black'>
-							<a href='https://x.com/Rojo_omedo254'>x</a>
-						</li>
-					</ul>
+			<div className='w-full min-h-[400px] bg-linear-to-b to-highlight from-darkBg flex items-center'>
+				<div className='max-w-5xl mx-auto px-6 z-15 my-[100px]'>
+					<h1 className='text-4xl md:text-5xl font-bold text-white leading-tight'>
+						<span className='text-highlight'>About me</span>
+					</h1>
+
+					<p className='mt-4 text-lg text-gray-300 max-w-3xl'>
+						A full-stack software Engineer focused on building fast, scalable,
+						and visually clean digital products. I turn complex ideas into
+						simple, reliable experiences using modern web technologies.
+					</p>
+
+					<p className='mt-4 text-gray-400 max-w-3xl'>
+						I work across the stack and comfortable with any language — from
+						crafting responsive interfaces with React and Tailwind CSS, to
+						designing efficient backend systems with Node.js, PHP, and SQL
+						databases. Performance, clarity, and long-term maintainability
+						guides every decision I make.
+					</p>
+
+					<blockquote className='mt-6 border-l-4 border-highlight pl-4 text-secondary italic max-w-3xl'>
+						“The problem comes first. The language is just a means to an end.I
+						can pick and learn any language any time as long as I need it to get
+						the job done.”
+						<span className='block mt-2 text-sm text-gray-500'>
+							— Anonymous
+						</span>
+					</blockquote>
+
+					<div className='mt-6 flex flex-wrap gap-3 mb-10'>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							React
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							React Native
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							Tailwind CSS
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							Node.js
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							Express
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							PHP
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							laravel
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							MySQL
+						</span>
+						<span className='px-4 py-1 rounded-full bg-darkOverlay text-sm text-gray-300'>
+							TypeScript
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
+
+export default Page;

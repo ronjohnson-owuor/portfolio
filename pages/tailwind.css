@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
-* {
-	padding: 0px;
-	margin: 0px;
-}
 
 @theme {
 	--color-darkBg: oklch(0.1 0 81);
@@ -15,7 +11,7 @@
 	--color-darkBorder: oklch(0.4 0 81);
 	--color-darkBorderMuted: oklch(0.3 0 81);
 	--color-primary: oklch(0.76 0.3 81);
-	--color-secondary: oklch(0.76 0.3 261);
+	--color-secondary: oklch(0.76 0.1 81);
 	--color-danger: oklch(0.7 0.05 30);
 	--color-warning: oklch(0.7 0.05 100);
 	--color-success: oklch(0.7 0.05 160);
