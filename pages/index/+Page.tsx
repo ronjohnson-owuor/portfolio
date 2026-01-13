@@ -5,11 +5,14 @@ import flowers_sit from '../../assets/flowers_sit.png';
 function Page() {
 	return (
 		<div className='w-full min-h-screen overflow-y-scroll bg-darkBg'>
-			<div id='header' className='w-full h-screen grid grid-cols-2 gap-4'>
+			<div
+				id='header'
+				className='w-full h-screen grid sm:grid-cols-2 gap-4 overflow-x-clip'
+			>
 				<div className='flex justify-center flex-col items-center text-center gap-10'>
-					<h2 className='text-[40px] text-darkText font-bold'>
+					<h2 className='text-[30px] md:text-[40px] text-darkText font-bold'>
 						Hi, there am
-						<b className='text-primary text-[60px]'>Ronjohnson</b>
+						<b className='text-primary md:text-[60px]'>Ronjohnson</b>
 					</h2>
 					<p className='w-[80%] text-darkTextMuted font-bold'>
 						I am a <i className='text-secondary'>software engineer</i> .I
@@ -17,18 +20,27 @@ function Page() {
 						tools and using my tech skills to make life easier for others.
 					</p>
 
-					<div className='flex gap-4 text-darkText my-10'>
-						<button className='flex gap-2 bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'>
+					<div className='sm:w-full flex gap-4 text-darkText my-10 flex-wrap justify-center'>
+						<button
+							onClick={() => (window.location.href = '/blog')}
+							className='flex gap-2 bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'
+						>
 							<Rss />
 							<p>blog</p>
 						</button>
-						<button className='flex  bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'>
+						<button
+							onClick={() => (window.location.href = '/tools')}
+							className='flex  bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'
+						>
 							<Cog />
 							<p>tools</p>
 						</button>
-						<button className='flex bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'>
+						<button
+							onClick={() => (window.location.href = '/contact')}
+							className='flex bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'
+						>
 							<BriefcaseBusiness />
-							<p>work with me</p>
+							<p>contact</p>
 						</button>
 					</div>
 				</div>
@@ -39,7 +51,7 @@ function Page() {
 							loading='lazy'
 							className='filter grayscale-10 sepia-80 brightness-100 w-[300px] h-[450px] object-fit  absolute translate-y-20 z-10 scale-[1.9] transition duration-500'
 							src={flowers_sit}
-							alt=''
+							alt='my pic'
 						/>
 						<div className='w-[300px] h-[300px] rounded-[100vh] bg-primary shadow-2xl shadow-secondary filter blur contrast-120'></div>
 					</div>
@@ -104,6 +116,27 @@ function Page() {
 						</span>
 					</div>
 				</div>
+			</div>
+			<div className='bg-primary w-full h-[60px] flex items-center justify-center sm:gap-4 flex-col sm:flex-row'>
+				<span>&copy;dalarX infini, {new Date().getFullYear()}</span>
+
+				<ul className='flex flex-row gap-2'>
+					<li className='underline hover:text-white transition-linear duration-500 hover:-translate-y-2'>
+						<a target='_blank' href='https://tiktok.com/@surv3illant'>
+							tiktok
+						</a>
+					</li>
+					<li className='underline hover:text-white transition-linear duration-500 hover:-translate-y-2'>
+						<a target='_blank' href='https://instagram.com/surv3illant_'>
+							instagram
+						</a>
+					</li>
+					<li className='underline hover:text-white transition-linear duration-500 hover:-translate-y-2'>
+						<a target='_blank' href='https://x.com/@Rojo_omedo254'>
+							x
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);
