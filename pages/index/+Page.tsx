@@ -49,7 +49,7 @@ function Page() {
 					<div>
 						<img
 							loading='lazy'
-							className='filter grayscale-10 sepia-80 brightness-100 w-[300px] h-[450px] object-fit  absolute translate-y-20 z-10 scale-[1.9] transition duration-500'
+							className='filter grayscale brightness-100 w-[300px] h-[450px] object-fit  absolute translate-y-20 z-10 scale-[1.9] transition duration-500'
 							src={flowers_sit}
 							alt='my pic'
 						/>
