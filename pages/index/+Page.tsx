@@ -29,11 +29,11 @@ function Page() {
 							<p>blog</p>
 						</button>
 						<button
-							onClick={() => (window.location.href = '/tools')}
+							onClick={() => (window.location.href = '/services')}
 							className='flex  bg-secondary rounded-md p-2 gap-2 hover:bg-primary cursor-pointer transition-linear duration-500 hover:-translate-y-1'
 						>
 							<Cog />
-							<p>tools</p>
+							<p>services</p>
 						</button>
 						<button
 							onClick={() => (window.location.href = '/contact')}

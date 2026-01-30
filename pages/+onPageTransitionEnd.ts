@@ -1,3 +1,4 @@
 export async function onPageTransitionEnd() {
-	document.body.classList.remove('page-transition');
+  console.log("Page transition end");
+  document.body.classList.remove("page-transition");
 }

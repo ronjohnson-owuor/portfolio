@@ -1,7 +1,7 @@
-Generated with [vike.dev/new](https://vike.dev/new) ([version 562](https://www.npmjs.com/package/create-vike/v/0.0.562)) using this command:
+Generated with [vike.dev/new](https://vike.dev/new) ([version 572](https://www.npmjs.com/package/create-vike/v/0.0.572)) using this command:
 
 ```sh
-npm create vike@latest --- --react --tailwindcss
+npm create vike@latest --- --react --tailwindcss --telefunc --express --google-analytics --googleAnalytics
 ```
 
 ## Contents
@@ -11,6 +11,7 @@ npm create vike@latest --- --react --tailwindcss
   - [Routing](#routing)
   - [SSR](#ssr)
   - [HTML Streaming](#html-streaming)
+- [Photon](#photon)
 
 ## Vike
 
@@ -43,4 +44,10 @@ SSR is enabled by default. You can [disable it](https://vike.dev/ssr) for all or
 ### HTML Streaming
 
 You can [enable/disable HTML streaming](https://vike.dev/stream) for all or specific pages.
+
+## Photon
+
+[Photon](https://photonjs.dev) is a next-generation infrastructure for deploying JavaScript servers.
+
+See [Introducing Photon](https://vike.dev/blog/photon) and [Why Photon](https://photonjs.dev/why) to learn more.
 
